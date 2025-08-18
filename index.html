@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulateur de prix - Mon Bureau Tout Propre</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">Mon Bureau Tout Propre</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Simulateur</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Nos services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENU PRINCIPAL -->
+  <div class="container my-5">
+    <h1 class="mb-4">Simulateur de prix</h1>
+    <form>
+      <!-- Surface -->
+      <div class="mb-3">
+        <label for="surface" class="form-label">Surface des bureaux (en m²)</label>
+        <input type="number" class="form-control" id="surface" name="surface" min="0" required>
+      </div>
+
+      <!-- Fréquence -->
+      <div class="mb-3">
+        <label for="frequence" class="form-label">Fréquence du nettoyage</label>
+        <select class="form-select" id="frequence" name="frequence" required>
+          <option value="">-- Choisissez une fréquence --</option>
+          <option value="1">Une fois par semaine</option>
+          <option value="2">Deux fois par semaine</option>
+          <option value="7">Tous les jours</option>
+        </select>
+      </div>
+
+      <!-- Vitres -->
+      <div class="mb-3">
+        <label class="form-label">Vitres incluses ?</label>
+        <div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="vitres" id="vitresOui" value="oui" required>
+            <label class="form-check-label" for="vitresOui">Oui</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="vitres" id="vitresNon" value="non">
+            <label class="form-check-label" for="vitresNon">Non</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Soumission -->
+      <button type="button" class="btn btn-primary" onclick="calculerPrix()">Calculer le prix</button>
+
+      <!-- Résultat -->
+      <div id="resultat" class="mt-4"></div>
+
+    </form>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-light text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-1">© 2025 Mon Bureau Tout Propre</p>
+      <small>Service de nettoyage professionnel pour vos bureaux.</small>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
