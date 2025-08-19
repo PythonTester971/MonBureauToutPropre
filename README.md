@@ -57,6 +57,7 @@ Si le 'Oui' est choisi, le prix jusqu'ici calculé sera majoré de **+10%**
 - **TVA (20%)** : `66.00 €`
 - **Montant TTC** : `396.00 €`
 
+![alt text](image.png)
 ---
 
 ## Fichiers inclus
